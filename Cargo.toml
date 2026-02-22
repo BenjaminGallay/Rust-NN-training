@@ -1,0 +1,15 @@
+[package]
+name = "guide"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Disable autotune default for convolutions
+burn = { version = "~0.18", features = ["std", "tui", "train", "vision", "wgpu", "fusion"], default-features = false }
+burn-ndarray = "0.19.1"
+ndarray = "0.17.1"
+rand = "0.9.2"
+# burn = { version = "~0.18", features = ["train", "vision", "wgpu"] }
+
+[build]
+rustflags = ["-C", "target-cpu=x86-64"]
