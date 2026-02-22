@@ -137,6 +137,6 @@ pub fn train<B: AutodiffBackend>(artifact_dir: &str, config: TrainingConfig, dev
     // Save model in MessagePack format with full precision
     let recorder = PrettyJsonFileRecorder::<FullPrecisionSettings>::new();
     model_trained2
-        .save_file("./aga/prettymodel.json", &recorder)
+        .save_file("./models/prettymodel.json", &recorder)
         .expect("Should be able to save the model");
 }
